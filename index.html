@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Resume Tools</title>
+    <style>
+        /* Reset and Global Styles */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(45deg, #5a5c61, #3c3f47);
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+        }
+
+        /* Container Styling */
+        .container {
+            width: 80%;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .header h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .header p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.8;
+        }
+
+        /* Button Styling */
+        .button-container {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+        }
+
+        .btn {
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            font-weight: 500;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .ai-resume-builder {
+            background-color: #6A1B9A;
+            color: #fff;
+        }
+
+        .ats-checker {
+            background-color: #0288D1;
+            color: #fff;
+        }
+
+        .resume-parser {
+            background-color: #388E3C;
+            color: #fff;
+        }
+
+        .btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .btn:active {
+            transform: translateY(2px);
+            box-shadow: 0 3px 7px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2.5rem;
+            }
+
+            .header p {
+                font-size: 1rem;
+            }
+
+            .button-container {
+                flex-direction: column;
+                gap: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>Welcome to AI Resume-360</h1>
+            <p>Enhance your resume with advanced tools powered by AI</p>
+        </header>
+        
+        <div class="button-container">
+            <a href="#" class="btn ai-resume-builder" onclick="redirectTo('builder')">AI Resume Builder</a>
+            <a href="#" class="btn ats-checker" onclick="redirectTo('ats')">Improve your Resume ATS</a>
+            <a href="#" class="btn resume-parser" onclick="redirectTo('parser')">Resume Parser</a>
+        </div>
+    </div>
+
+    <script>
+        function redirectTo(project) {
+            if (project === 'ats') {
+                window.location.href = "http://localhost:8501"; // URL for ATS Tracker
+            } else if (project === 'builder') {
+                window.location.href = "http://localhost:3000"; // URL for Resume Builder
+            } else if (project === 'parser') {
+                window.location.href = "http://localhost:8000"; // URL for Resume Parser
+            } else {
+                alert("Unknown project selected.");
+            }
+        }
+    </script>
+</body>
+</html>

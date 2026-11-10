@@ -1,0 +1,7 @@
+cd "End-To-End-Resume-ATS-Tracking-LLM-Project-With-Google-Gemini-Pro"
+streamlit run app.py
+
+cd "ResumeAI"
+npm run dev
+
+open index.html
